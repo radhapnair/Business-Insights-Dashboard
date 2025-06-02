@@ -70,25 +70,100 @@ The company faced significant losses from data-poor expansion decisions, prompti
 - `fact_sales_monthly`: Actual sales transactions
 - Supporting cost and pricing tables
 
-## 🎨 Dashboard Views
+## 📁 Dashboard Architecture & Analytics
 
-### 🏠 Navigation Hub
-Central landing page with quick access to all analytical views
+### 1. 🏠 Navigation Hub
+* Developed centralized **dashboard navigation system** with sectioned access to all analytical views
+* Implemented **Info & Support modules** using Power BI bookmarks
+* Integrated dataset documentation and schema references for user guidance
 
-### 💰 Finance Dashboard
-Revenue analysis, profitability metrics, and financial KPIs
+### 2. 💰 Financial Analytics
+**Visualization Components:**
+* KPI cards with conditional formatting: Net Sales, Gross Margin %, Net Profit % (vs Target/Previous Year)
+* P&L statement matrix displaying Current Year, Previous Year/Target, Change metrics, % variance
+* Product and customer performance rankings by profitability
+* Time-series area charts for trend analysis
 
-### 📊 Sales Performance  
-Sales trends, target vs actual, and territory analysis
+**Business Intelligence:**
+* **140–354% Net Sales expansion** across 2019-2022 period
+* **Negative net profit margins** post-2019 attributed to **elevated operational expenses** from market expansion strategy
 
-### 🎯 Marketing Analytics
-Campaign effectiveness, customer segmentation, and market insights
+### 3. 📈 Sales Performance Analytics
+**Visualization Components:**
+* Dynamic scatter plot: Net Sales vs Gross Margin % with toggle functionality
+* Percentage breakdown donuts: Net Sales, Gross Margin, Invoice Deductions, COGS distribution
+* Customer and product profitability matrix with drill-down capabilities
 
-### 🔗 Supply Chain Monitor
-Inventory management, forecast accuracy, and operational metrics
+**Business Intelligence:**
+* **Notebook category** captured **42.5% market share** in 2022 sales
+* **Amazon partnership** generated **$496.88M revenue**, while **Relief** demonstrated superior margin performance
 
-### 👔 Executive Summary
-High-level overview for leadership decision making
+### 4. 📢 Marketing Intelligence
+**Visualization Components:**
+* Toggle-enabled scatter analysis: Gross Margin % or Net Profit % vs Net Sales
+* Waterfall visualization: Gross Margin flow to Net Profit through operational expenses
+* Market segment and regional performance matrices
+
+**Business Intelligence:**
+* **Universal negative profitability** across all regions in 2022 due to **operational expenses exceeding gross margins**
+
+### 5. 🚚 Supply Chain Analytics
+**Visualization Components:**
+* Forecast accuracy KPI cards: Forecast Accuracy %, Net Error, Absolute Error metrics
+* Customer and product-level forecast performance matrices
+* Forecast trend visualizations with error analysis
+
+**Business Intelligence:**
+* **December 2021** recorded **highest forecast deviation** with **81.5% accuracy rate**
+* **FY2021** experienced **peak absolute forecast error (~$10M)**
+
+### 6. 🧑‍💼 Executive Dashboard
+**Visualization Components:**
+* Composite KPI cards with color-coded growth indicators
+* Multi-chart trend analysis: Column, Line, Area, Ribbon, Bar combinations
+* Sub-regional performance matrices with top/bottom performer rankings
+
+**Business Intelligence:**
+* **Retail channel dominance** at **70.5% revenue contribution**; **P&A Division** represents **49.9% of business**
+* **6% market share achievement** by 2022 despite operational losses, validating strategic growth approach
+
+## 🛠️ Technical Implementation
+
+### 🔗 Data Engineering
+* Established **MySQL-Power BI connectivity** with local database integration
+* Executed data quality assurance, cleansing protocols, and **fact/dimension table architecture**
+* Engineered fiscal calendar dimension with Fiscal Year/Month calculations
+* Implemented **data validation frameworks** including cross-tabulation and user acceptance testing
+
+### ⚙️ Data Architecture
+* Constructed **snowflake schema** with optimized one-to-many relationships
+* Performance-tuned model by disabling unnecessary data loads
+* Developed YTD/YTG analytical columns for sales progression tracking
+
+### 📐 Advanced Analytics (DAX)
+**25+ Custom Measures Including:**
+* Core KPIs: `Net Sales`, `Gross Margin`, `Net Profit`, `Forecast Accuracy`, `Net Error`, `ABS Error`
+* P&L Analytics: `P&L YoY Change %`, `Operational Expense`, `Revenue Contribution %`
+* Comparative Analysis: `vs Previous Year`, `vs Target` variants
+* UX Enhancement: Dynamic titles, slicer labels, toggle measures, quarter calculations
+
+### 🧰 Power BI Advanced Features
+* **DAX Studio**: Model optimization and performance enhancement
+* **Bookmark System**: Toggle functionality, info panels, visual interactivity
+* **Dynamic Filtering**: Benchmark comparisons, product/customer segmentation
+* **Power BI Service**: Report deployment, gateway configuration, automated refresh, app workspace management
+
+### 📈 Visualization Techniques
+* Waterfall, Ribbon, Area, and Line chart implementations
+* Conditional formatting KPI cards
+* Dynamic matrix with responsive column naming
+* Custom tooltips for detailed metric exploration
+
+## 🎯 Technical Competencies Gained
+* **Stakeholder Simulation**: End-to-end business intelligence project lifecycle management
+* **Performance Optimization**: Power BI data modeling, query optimization, and visual design best practices
+* **Advanced DAX Mastery**: Complex business metric calculations and interactive dashboard functionality
+
 
 ## 🎯 Business Impact
 This comprehensive analytics solution enables:
